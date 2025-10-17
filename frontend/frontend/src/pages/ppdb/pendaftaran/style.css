@@ -1,0 +1,110 @@
+.reg-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f7fafc 0%, #e2e8f0 100%);
+  padding: 2rem 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.reg-card {
+  width: 100%;
+  max-width: 500px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.reg-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.reg-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.reg-body {
+  padding: 2rem 1.5rem;
+}
+
+.form-row {
+  margin-bottom: 1.5rem;
+}
+
+.error {
+  color: #e53e3e;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.error::before {
+  content: '⚠️';
+  font-size: 0.75rem;
+}
+
+.submit-section {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+.register-link a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 0.25rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.register-link a:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .reg-page {
+    padding: 1rem 0.5rem;
+  }
+  
+  .reg-header {
+    padding: 1.5rem 1rem;
+  }
+  
+  .reg-body {
+    padding: 1.5rem 1rem;
+  }
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 14px;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.login-link a {
+  color: #1e3560;
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 6px;
+}

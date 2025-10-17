@@ -1,0 +1,432 @@
+/* ===== GLOBAL ===== */
+* {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  position: relative;
+  z-index: 0;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-logo {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.6));
+}
+
+.hero h1 {
+  position: relative;
+  z-index: 1;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== VISI MISI SECTION ===== */
+.visi-misi-section {
+  background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+  color: #333;
+  padding: 4rem 0;
+}
+
+.visi-misi-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.visi, .misi {
+  text-align: center;
+}
+
+.visi h2, .misi h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid #007bff;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+  color: #007bff;
+}
+
+.visi p, .misi p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+  text-align: justify;
+  letter-spacing: 0.3px;
+}
+
+/* ===== CONTENT SECTION ===== */
+.content-section {
+  background: transparent;
+  padding: 4rem 0;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.carousel-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.learning-section {
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10;
+  min-height: 400px;
+}
+
+.learning-section h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2d1105;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  border-bottom: 3px solid #e8aa25;
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 0.5rem;
+}
+
+.learning-list {
+  list-style: none;
+  padding: 0;
+}
+
+.learning-list li {
+  background: #f8f9fa;
+  margin-bottom: 0.8rem;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #e8aa25;
+  font-size: 1rem;
+  color: #333;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.learning-list li:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(232, 170, 37, 0.2);
+}
+
+/* ===== FUTURE JOB SECTION ===== */
+.future-job-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 5rem 0;
+  position: relative;
+}
+
+.future-job-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23D4A574" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%23e8aa25" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>') repeat;
+  pointer-events: none;
+}
+
+.future-job-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.future-job-section h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #1f2937;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(135deg, #D4A574, #e8aa25);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+}
+
+.future-job-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(135deg, #D4A574, #e8aa25);
+  border-radius: 2px;
+}
+
+.future-job-section p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #6b7280;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.job-grid, .career-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+.job-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 4px solid #e8aa25;
+}
+
+.job-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.job-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.job-card h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+}
+
+/* ===== TIMELINE SECTION ===== */
+.timeline-section-wrapper {
+  background: linear-gradient(to bottom, #374151, #1f2937);
+  color: white;
+  padding: 4rem 0;
+}
+
+.timeline-section-wrapper .timeline-title {
+  color: #fdd76e;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hero {
+    height: 70vh;
+    padding-top: 60px;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .visi-misi-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .visi h2, .misi h2 {
+    font-size: 1.5rem;
+  }
+
+  .visi p, .misi p {
+    font-size: 0.95rem;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .learning-section {
+    padding: 1rem;
+  }
+
+  .learning-section h3 {
+    font-size: 1.5rem;
+  }
+
+  .future-job-section h2 {
+    font-size: 2rem;
+  }
+
+  .career-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 400px;
+  }
+}
+
+/* ===== CAREER GRID ===== */
+.career-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== FACILITY CAROUSEL ===== */
+.facility-carousel {
+  position: relative;
+  margin-bottom: 40px;
+  max-width: 450px;
+  width: 100%;
+}
+
+.facility-carousel .carousel-container {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  height: 300px;
+}
+
+.facility-carousel .carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.facility-carousel .carousel-item.active {
+  opacity: 1;
+}
+
+.facility-carousel .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.facility-carousel .carousel-indicators {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.facility-carousel .indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d1d5db;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.facility-carousel .indicator.active {
+  background: #eab308;
+  transform: scale(1.3);
+  box-shadow: 0 0 12px rgba(234, 179, 8, 0.4);
+}
+
+.facility-carousel .indicator:hover {
+  background: #9ca3af;
+  transform: scale(1.1);
+}
+
+/* Responsive design untuk facility carousel */
+@media (max-width: 768px) {
+  .facility-carousel {
+    max-width: 100%;
+  }
+  
+  .facility-carousel .carousel-container {
+    height: 250px;
+  }
+  
+  .carousel-section {
+    padding: 0.5rem;
+  }
+  
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
